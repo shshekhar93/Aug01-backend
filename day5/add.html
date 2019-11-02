@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add two numbers</title>
+    <style>
+      .container {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Result is {sum}</h1>
+      <form action="/add" method="POST">
+        <div>
+            <label>
+            <span>Number 1</span>
+            <input name="number1" placeholder="Enter number 1" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <span>Number 2</span>
+            <input name="number2" placeholder="Enter number 2" />
+          </label>
+        </div>
+        <div>
+          <button type="submit">Add the numbers</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
