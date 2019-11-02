@@ -1,7 +1,7 @@
 /**
  * This line is added by node JS before executing the file.
  */
-// function xyz (module, exports, require, __dirname, __filename) {
+// function xyz (exports, require, module, __filename, __dirname) {
 
 const fs = require('fs');
 
@@ -29,7 +29,7 @@ module.exports = handleHTTPRequest;
 
 
 //require function internally
-function require(filename) {
+/* function require(filename) { */
   // convert to absolute filename.
 
   // read entire file 
@@ -37,11 +37,11 @@ function require(filename) {
   // append the function close suffix
   // parse the entire file into a function called xyz
 
-  const module = {};
+/*  const module = {};
   const exports = {};
   module.exports = exports;
 
   xyz(module, exports, require, __dirname, __filename);
 
-  return module.exports;
-}
+  return module.exports;*/
+/* } */
