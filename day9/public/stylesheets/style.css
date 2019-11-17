@@ -1,8 +1,26 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+body .todo-item {
+  height: 250px;
+  background-color: rgb(227, 245, 66);
+  padding: 15px;
+  margin: 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.delete-todo {
+  position: absolute;
+  top: 5px;
+  right:10px;
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
 }

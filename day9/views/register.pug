@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  style.
+    .container {
+      width: 350px;
+    }
+    .form-control {
+      margin-bottom: 10px;
+    }
+  div.container
+    form(action="/register" method="POST")
+      input.form-control(type="text" name="name" placeholder="Full name")
+      input.form-control(type="email" name="email" placeholder="Email address")
+      input.form-control(type="password" name="password" placeholder="Password")
+      button.btn.btn-primary(type="submit") Create account

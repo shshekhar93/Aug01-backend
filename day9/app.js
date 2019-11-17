@@ -23,7 +23,13 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-}))
+}));
+
+app.use(function(req, res, next) {
+  res.locals = res.locals || {};
+  res.locals.user = req.session.user;
+  next();
+})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

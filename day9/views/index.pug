@@ -1,10 +1,19 @@
 extends layout
 
 block content
-  div(id="div-container" style="margin-top:100px;")
-    h1 #{title}
-    if name !== undefined
-      p Hello #{name}
-    else
-      p Hello Stranger
-    p Welcome to #{title}
+
+  form(action="/todo" method="POST")
+    div.row(style="margin-top:30px;")
+      div.col-8
+        input.form-control(name="todoText" placeholder="Add a todo")
+      div.col-4
+        button.btn.btn-primary(type="submit") Save ToDo
+    p All Todos
+
+  div.row
+    each todo in todos
+      div.col-3.todo-item
+        form(action="/todo/delete" method="POST")
+          input(type="hidden" name="todoId" value=todo._id)
+          button.delete-todo(type="submit") X
+        p #{todo.todoText}
